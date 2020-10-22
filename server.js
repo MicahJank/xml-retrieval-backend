@@ -33,7 +33,6 @@ server.post('/', (req, res, next) => {
                 
                 fs.writeFileSync(path, stringified)
 
-                cleanupCallback()
                 res.download(path)
             });
         })
