@@ -34,6 +34,7 @@ server.post('/', (req, res, next) => {
                 fs.writeFileSync(path, stringified)
 
                 res.download(path)
+                cleanupCallback()
             });
         })
       });
