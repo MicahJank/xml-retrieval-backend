@@ -10,7 +10,7 @@ const tmp = require('tmp');
 configureMiddleware(server);
 
 server.get('/', (req, res) => {
-    res.sendFile(`${__dirname}/index.html`) 
+    res.send('<h2>Ready to make requests</h2>')
 })
 
 server.post('/', (req, res, next) => {
